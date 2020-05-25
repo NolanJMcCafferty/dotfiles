@@ -1,0 +1,5 @@
+alias gs="git status"
+alias gc="git commit"
+alias v="vim"
+alias gl="git log --all --graph --decorate"
+alias dc=cd
