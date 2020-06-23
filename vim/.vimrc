@@ -27,7 +27,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/syntastic'"
 Plugin 'kien/ctrlp.vim.git'
+
+" ----- Linters ----- "
+Plugin 'dense-analysis/ale'
+let g:ale_linters = {'python': ['flake8']}
+let g:ale_fixers  = {'python': []}  "black "
+
+let g:ale_fix_on_save = 1
 Plugin 'rking/ag.vim.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe.git' 
@@ -78,6 +86,7 @@ set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
+let g:airline_theme='bubblegum'
 
 call vundle#end()
 
